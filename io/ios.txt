@@ -1,0 +1,402 @@
+selfopt: 200 inputs and outputs, from real runs (io/ios.pl has the same as Prolog facts).
+
+1. steps(fib, naive, 11)
+   => 89-859
+2. evolve(rev, [[2,8,0,9],[6,8],[],[3,5,9,6,1]])
+   => [naive-43,acc-19]
+3. accept(fib, naive, iter, [6,5])
+   => accept(116,48)
+4. steps(rev, acc, [0,0])
+   => [0,0]-4
+5. evolve(sum, [[6,6,6,0,8,5]])
+   => [plain-13]
+6. accept(fib, iter, naive, [8,1,3])
+   => reject(not_faster(54,213))
+7. steps(fib, naive, 4)
+   => 3-25
+8. evolve(fib, [9])
+   => [naive-325,iter-38]
+9. accept(sum, plain, acc, [[2,6,5,2,8,5],[2]])
+   => reject(not_faster(16,18))
+10. steps(rev, naive, [6,4,7,1,5])
+   => [5,1,7,4,6]-21
+11. evolve(sum, [[4],[5]])
+   => [plain-6]
+12. accept(rev, wrong, acc, [[6,7,5,9,2,1,1]])
+   => reject(wrong_on([6,7,5,9,2,1,1]))
+13. steps(sum, plain, [4])
+   => 4-3
+14. evolve(rev, [[9,1,0,9,2],[9,5,5,0],[],[8,5,1,7]])
+   => [naive-52,acc-21]
+15. accept(fib, iter, naive, [2])
+   => accept(10,7)
+16. steps(rev, acc, [2,8,8])
+   => [8,8,2]-5
+17. evolve(rev, [[2,2,2,2],[9,7,9,1],[2,2,0],[2,4,1,0,1,4]])
+   => [naive-68,acc-25]
+18. accept(fib, naive, iter, [7,9])
+   => accept(446,68)
+19. steps(rev, naive, [5,4,1,8,4,3])
+   => [3,4,8,1,4,5]-28
+20. evolve(rev, [[4,1,7,8,5],[4,0,1]])
+   => [naive-31,acc-12]
+21. accept(fib, iter, naive, [12])
+   => reject(not_faster(50,1393))
+22. steps(rev, acc, [0,8])
+   => [8,0]-4
+23. evolve(fib, [1])
+   => [naive-1]
+24. accept(fib, naive, iter, [5,3])
+   => accept(56,36)
+25. steps(rev, wrong, [2,9,0])
+   => [2,9,0]-1
+26. evolve(rev, [[8,6]])
+   => [naive-6,acc-4]
+27. accept(sum, plain, acc, [[6,9,7,7,2],[0]])
+   => reject(not_faster(14,16))
+28. steps(rev, acc, [6,8,6,2,6,9])
+   => [9,6,2,6,8,6]-8
+29. evolve(fib, [9,7,1])
+   => [naive-447,iter-74]
+30. accept(sum, wrong, plain, [[6,5],[6,4,7,7,2,9,9],[8,1,4,9,7,4,6]])
+   => reject(wrong_on([6,5]))
+31. steps(rev, acc, [7,6,2,9,7,1,3])
+   => [3,1,7,9,2,6,7]-9
+32. evolve(fib, [12,11])
+   => [naive-2252,iter-96]
+33. accept(rev, naive, acc, [[],[4,3,1,6,4]])
+   => accept(22,9)
+34. steps(sum, plain, [2])
+   => 2-3
+35. evolve(fib, [8,10])
+   => [naive-728,iter-76]
+36. accept(fib, iter, iter, [4,5])
+   => reject(not_faster(40,40))
+37. steps(sum, wrong, [2,9,8,0])
+   => 4-9
+38. evolve(sum, [])
+   => [plain-0]
+39. accept(rev, naive, naive, [[9,3,2,7,3],[1,1,8,9,1]])
+   => reject(not_faster(42,42))
+40. steps(rev, naive, [6,1,6])
+   => [6,1,6]-10
+41. evolve(sum, [])
+   => [plain-0]
+42. accept(fib, naive, naive, [12])
+   => reject(not_faster(1393,1393))
+43. steps(rev, wrong, [6,5,8,4])
+   => [6,5,8,4]-1
+44. evolve(rev, [[2,0,0],[6,4,1,1,0,7,9]])
+   => [naive-46,acc-14]
+45. accept(fib, naive, naive, [8,2,8])
+   => reject(not_faster(405,405))
+46. steps(sum, acc, [4,7])
+   => 11-6
+47. evolve(fib, [])
+   => [naive-0]
+48. accept(fib, naive, naive, [2])
+   => reject(not_faster(7,7))
+49. steps(sum, plain, [7,4,9,6,1])
+   => 27-11
+50. evolve(sum, [[6,7,3,5,7,3]])
+   => [plain-13]
+51. accept(fib, naive, naive, [4,8,0])
+   => reject(not_faster(225,225))
+52. steps(fib, iter, 12)
+   => 144-50
+53. evolve(fib, [0,7,6])
+   => [naive-195,iter-58]
+54. accept(rev, acc, acc, [[9],[5,2],[8,9,2,1,7]])
+   => reject(not_faster(14,14))
+55. steps(rev, naive, [0,7,4,6,5,0])
+   => [0,5,6,4,7,0]-28
+56. evolve(rev, [[4,3,0]])
+   => [naive-10,acc-5]
+57. accept(rev, acc, acc, [[7,5]])
+   => reject(not_faster(4,4))
+58. steps(rev, naive, [4,1,1,6])
+   => [6,1,1,4]-15
+59. evolve(sum, [[5],[8,9,0,1,0,3],[5],[4,3,6,0,2,5,4]])
+   => [plain-34]
+60. accept(sum, wrong, wrong, [[3,3,1,3,1,3,1]])
+   => reject(not_faster(15,15))
+61. steps(fib, naive, 0)
+   => 0-1
+62. evolve(rev, [])
+   => [naive-0]
+63. accept(rev, wrong, naive, [[4,3,3],[],[3,5,4,2,5,0]])
+   => reject(wrong_on([4,3,3]))
+64. steps(rev, acc, [6])
+   => [6]-3
+65. evolve(fib, [6,2,7,0])
+   => [naive-202,iter-68]
+66. accept(fib, naive, naive, [1])
+   => reject(not_faster(1,1))
+67. steps(rev, acc, [4,3,8,6])
+   => [6,8,3,4]-6
+68. evolve(rev, [[7,7,5],[],[6,8,7],[3,0,6,9,2]])
+   => [naive-42,acc-19]
+69. accept(sum, acc, acc, [[8,0,2,6],[9,3],[6,9,7,6,5]])
+   => reject(not_faster(28,28))
+70. steps(sum, wrong, [1,6,0,8,3])
+   => 5-11
+71. evolve(rev, [])
+   => [naive-0]
+72. accept(fib, naive, naive, [2])
+   => reject(not_faster(7,7))
+73. steps(sum, acc, [2,1,0,7,2,0,7])
+   => 19-16
+74. evolve(fib, [7,5,0])
+   => [naive-165,iter-54]
+75. accept(fib, iter, iter, [5,3,12])
+   => reject(not_faster(86,86))
+76. steps(rev, acc, [3])
+   => [3]-3
+77. evolve(sum, [[9,8,6,7,6],[],[]])
+   => [plain-13]
+78. accept(fib, iter, iter, [7])
+   => reject(not_faster(30,30))
+79. steps(rev, acc, [3])
+   => [3]-3
+80. evolve(rev, [[8,4,1,1,7,4],[6,0,2,9,0]])
+   => [naive-49,acc-15]
+81. accept(fib, naive, naive, [12,11,9])
+   => reject(not_faster(2577,2577))
+82. steps(rev, acc, [0,4,7,5])
+   => [5,7,4,0]-6
+83. evolve(rev, [[8],[8,4,4,8,1,8],[4,9,4,3,6,4,5]])
+   => [naive-67,acc-20]
+84. accept(rev, acc, wrong, [[5,2,6,7],[1,1],[9,3,2,3,5,8]])
+   => reject(wrong_on([5,2,6,7]))
+85. steps(sum, acc, [1,8])
+   => 9-6
+86. evolve(sum, [[7,2,4,0,6],[7,8,8],[2,2,4,0,1,7,4],[0,9,8,6,6]])
+   => [plain-44]
+87. accept(sum, plain, wrong, [[5,8,1],[3]])
+   => reject(wrong_on([5,8,1]))
+88. steps(fib, iter, 4)
+   => 3-18
+89. evolve(rev, [[0,6,4,2],[],[3,4,9,4,6],[]])
+   => [naive-38,acc-17]
+90. accept(fib, naive, iter, [10,8])
+   => accept(728,76)
+91. steps(fib, naive, 7)
+   => 13-121
+92. evolve(rev, [[1,1],[6,7,2,5,5],[2,3,5,9]])
+   => [naive-42,acc-17]
+93. accept(rev, wrong, wrong, [[9,3,4,3,3,1,9]])
+   => reject(not_faster(1,1))
+94. steps(fib, naive, 6)
+   => 8-73
+95. evolve(sum, [[3,3],[]])
+   => [plain-6]
+96. accept(fib, naive, iter, [5,4])
+   => accept(68,40)
+97. steps(rev, naive, [3,3,1,1,7,9,7])
+   => [7,9,7,1,1,3,3]-36
+98. evolve(sum, [[9,4,8,7]])
+   => [plain-9]
+99. accept(fib, iter, iter, [11])
+   => reject(not_faster(46,46))
+100. steps(rev, acc, [0,7,1,5,7])
+   => [7,5,1,7,0]-7
+101. evolve(fib, [9,7])
+   => [naive-446,iter-68]
+102. accept(fib, naive, iter, [9])
+   => accept(325,38)
+103. steps(sum, wrong, [8,4,0])
+   => 3-7
+104. evolve(fib, [])
+   => [naive-0]
+105. accept(fib, iter, naive, [3,6])
+   => reject(not_faster(40,86))
+106. steps(rev, wrong, [])
+   => []-1
+107. evolve(fib, [8,8,7,2])
+   => [naive-526,iter-108]
+108. accept(sum, wrong, acc, [[9,7,0,6,2],[4,1,3,0,0],[]])
+   => reject(wrong_on([9,7,0,6,2]))
+109. steps(fib, iter, 9)
+   => 34-38
+110. evolve(fib, [])
+   => [naive-0]
+111. accept(rev, acc, naive, [[3,7,6,7,2]])
+   => reject(not_faster(7,21))
+112. steps(rev, wrong, [2,8,5])
+   => [2,8,5]-1
+113. evolve(fib, [10,10,6,9])
+   => [naive-1456,iter-148]
+114. accept(fib, naive, naive, [9,7])
+   => reject(not_faster(446,446))
+115. steps(rev, wrong, [7,0,9])
+   => [7,0,9]-1
+116. evolve(sum, [[],[2],[5,4,3,6,3,2,3]])
+   => [plain-19]
+117. accept(sum, plain, plain, [[6,8,9,8,4],[4]])
+   => reject(not_faster(14,14))
+118. steps(sum, wrong, [4])
+   => 1-3
+119. evolve(rev, [[9,6,0,6,5],[5,1,6,2,3],[4]])
+   => [naive-45,acc-17]
+120. accept(fib, iter, iter, [10,3,10])
+   => reject(not_faster(98,98))
+121. steps(rev, acc, [1,5,1,9,4,5])
+   => [5,4,9,1,5,1]-8
+122. evolve(rev, [])
+   => [naive-0]
+123. accept(rev, acc, acc, [[1,6,5,9,5,7]])
+   => reject(not_faster(8,8))
+124. steps(sum, acc, [3])
+   => 3-4
+125. evolve(sum, [[7,0,7,1,3,7],[4]])
+   => [plain-16]
+126. accept(rev, acc, naive, [[7,0,4,3,4,6,0],[8,9,4,8,9,1,8]])
+   => reject(not_faster(18,72))
+127. steps(sum, acc, [])
+   => 0-2
+128. evolve(fib, [1])
+   => [naive-1]
+129. accept(rev, wrong, wrong, [[0,8,8,3,5,3]])
+   => reject(not_faster(1,1))
+130. steps(sum, wrong, [6])
+   => 1-3
+131. evolve(rev, [])
+   => [naive-0]
+132. accept(sum, wrong, acc, [[0],[4,8],[4,4,6,2]])
+   => reject(wrong_on([0]))
+133. steps(fib, naive, 3)
+   => 2-13
+134. evolve(fib, [11,9,8])
+   => [naive-1383,iter-118]
+135. accept(sum, wrong, plain, [[3,2,0],[3,6,4,2],[8,9,6,2,7,7]])
+   => reject(wrong_on([3,2,0]))
+136. steps(sum, acc, [])
+   => 0-2
+137. evolve(sum, [[9,5,7,2,8,3],[9,3,8,1],[1,5,6,9,3,9,6],[5,2,6]])
+   => [plain-44]
+138. accept(rev, acc, acc, [[1]])
+   => reject(not_faster(3,3))
+139. steps(rev, naive, [2,4,7,7,5])
+   => [5,7,7,4,2]-21
+140. evolve(fib, [6,3])
+   => [naive-86,iter-40]
+141. accept(sum, wrong, plain, [[2,2,4]])
+   => reject(wrong_on([2,2,4]))
+142. steps(fib, naive, 8)
+   => 21-199
+143. evolve(rev, [[7,3],[],[8,0,0,4],[7,7,1]])
+   => [naive-32,acc-17]
+144. accept(sum, wrong, plain, [[8,8],[2,7,2,5,8],[2,6,3,0,5,8,1]])
+   => reject(wrong_on([8,8]))
+145. steps(fib, iter, 8)
+   => 21-34
+146. evolve(fib, [5,0,11,10])
+   => [naive-1432,iter-112]
+147. accept(sum, plain, acc, [[4,0,9,8,5,2,6]])
+   => reject(not_faster(15,16))
+148. steps(fib, iter, 10)
+   => 55-42
+149. evolve(fib, [])
+   => [naive-0]
+150. accept(fib, naive, iter, [10,9])
+   => accept(854,80)
+151. steps(fib, naive, 7)
+   => 13-121
+152. evolve(sum, [])
+   => [plain-0]
+153. accept(fib, iter, naive, [12])
+   => reject(not_faster(50,1393))
+154. steps(sum, wrong, [0,8,9,8,3,9])
+   => 6-13
+155. evolve(rev, [[7],[6],[6,8,2,8,0]])
+   => [naive-27,acc-13]
+156. accept(sum, plain, acc, [[7,2,9]])
+   => reject(not_faster(7,8))
+157. steps(sum, acc, [8,0,3,4,8,5])
+   => 28-14
+158. evolve(sum, [])
+   => [plain-0]
+159. accept(fib, iter, iter, [7,12])
+   => reject(not_faster(80,80))
+160. steps(sum, plain, [2,7,5,2,6])
+   => 22-11
+161. evolve(fib, [7,7,0])
+   => [naive-243,iter-62]
+162. accept(fib, iter, iter, [4,6,6])
+   => reject(not_faster(70,70))
+163. steps(fib, iter, 1)
+   => 1-6
+164. evolve(rev, [[2,5,6,9],[8,4,8,1,1,2,9],[5]])
+   => [naive-54,acc-18]
+165. accept(fib, iter, iter, [1,5])
+   => reject(not_faster(28,28))
+166. steps(sum, plain, [])
+   => 0-1
+167. evolve(rev, [[6,2,3,4,1],[2,6,7,5,9]])
+   => [naive-42,acc-14]
+168. accept(sum, wrong, acc, [[3],[5,3,6,8],[0,1,2,3,5,6,0]])
+   => reject(wrong_on([3]))
+169. steps(sum, plain, [6])
+   => 6-3
+170. evolve(rev, [[9,0,0,2],[9,0,6,8,3,6]])
+   => [naive-43,acc-14]
+171. accept(fib, iter, iter, [7])
+   => reject(not_faster(30,30))
+172. steps(sum, acc, [8,0,5,0])
+   => 13-10
+173. evolve(fib, [])
+   => [naive-0]
+174. accept(sum, wrong, acc, [[5,9,4],[4,1,4,5,7,9]])
+   => reject(wrong_on([5,9,4]))
+175. steps(fib, iter, 0)
+   => 0-2
+176. evolve(fib, [])
+   => [naive-0]
+177. accept(rev, naive, wrong, [[7,5,3],[4,6,6,6,4,1,3],[5,9,9]])
+   => reject(wrong_on([7,5,3]))
+178. steps(sum, wrong, [5,4,5,0])
+   => 4-9
+179. evolve(rev, [[3,0,5,6,1,4]])
+   => [naive-28,acc-8]
+180. accept(rev, wrong, acc, [[0,9],[8,9,8,8,9,3]])
+   => reject(wrong_on([0,9]))
+181. steps(rev, wrong, [5,3])
+   => [5,3]-1
+182. evolve(sum, [[9,3,1,7,2,8],[7],[5,1,7,3]])
+   => [plain-25]
+183. accept(rev, wrong, acc, [[2,3,5],[3,2,5,4,6],[3,8,6,2]])
+   => reject(wrong_on([2,3,5]))
+184. steps(fib, naive, 3)
+   => 2-13
+185. evolve(fib, [10,10,10,4])
+   => [naive-1612,iter-144]
+186. accept(fib, iter, naive, [7,10])
+   => reject(not_faster(72,650))
+187. steps(sum, acc, [5])
+   => 5-4
+188. evolve(fib, [5,8])
+   => [naive-242,iter-56]
+189. accept(fib, naive, iter, [8])
+   => accept(199,34)
+190. steps(rev, acc, [8,6])
+   => [6,8]-4
+191. evolve(sum, [[4,4,5],[0,0,6],[3,1,4,4,8,2],[2,6,4,6,7,5,5]])
+   => [plain-42]
+192. accept(rev, wrong, wrong, [[3,5,5,6,4,7],[2,6,2,8],[]])
+   => reject(not_faster(3,3))
+193. steps(rev, wrong, [])
+   => []-1
+194. evolve(sum, [])
+   => [plain-0]
+195. accept(fib, iter, iter, [12,10])
+   => reject(not_faster(92,92))
+196. steps(rev, wrong, [])
+   => []-1
+197. evolve(sum, [[2,0,4,5,4],[],[],[0,7,4,2]])
+   => [plain-22]
+198. accept(rev, wrong, wrong, [[7,6,0,1,1,5],[6,9,0,7],[0,7,5]])
+   => reject(not_faster(3,3))
+199. steps(sum, acc, [3,9,1,2,5,3])
+   => 23-14
+200. evolve(rev, [[8,8,4],[9,7,4,5,6,6,7],[5],[4,8,0,7,3,9]])
+   => [naive-77,acc-25]
