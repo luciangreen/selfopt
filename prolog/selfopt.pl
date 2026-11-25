@@ -1,5 +1,5 @@
-% selfopt: a repo that rewrites its own code and keeps a change only when it is proven equal on
-% the tests and measurably faster. Speed is counted in resolution steps by a small
+% selfopt: choose among versions of a predicate written in advance, keeping a new one only when it
+% agrees with the current one on every test (checked, not proved for all inputs) and takes fewer steps. Speed is counted in resolution steps by a small
 % meta-interpreter, so it is the same on every machine. Each accepted version goes into the
 % history, so the history only ever gets faster.
 % A version is Name-Clauses, where Clauses are (Head :- Body) terms run by the meta-interpreter.
